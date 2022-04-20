@@ -1,1 +1,0 @@
-Using Newton's law of gravitation, two bodies will orbit each other before inevitably being launched off at hyperspeed.
