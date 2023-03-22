@@ -1,8 +1,8 @@
 let clicks = 0;
 let starMass = 4000000;
 let planet = new Planet([0,0], [0,0], 0, 0, 4, starMass, 0, 0, 0.0007);
-let planet1 = new Planet([0,0], [0,0], 0, 0, 400000, starMass, 0, 0, 0.007)
-let planet2 = new Planet([0,0], [0,0], 0, 0, 400000, starMass, 0, 0, 0.007)
+let planet1 = new Planet([0,0], [0,0], -100, -100, 400000, starMass, 0, 0, 0.007)
+let planet2 = new Planet([0,0], [0,0], -100, -100, 400000, starMass, 0, 0, 0.007)
 let trail = [];
 let trail1 = [];
 let trail2 = [];
@@ -44,6 +44,8 @@ function draw(){
 	noStroke();
 	background(0);
 	fill(255);
+	planet1.display();
+	planet2.display();
 	if(clicks>=2){
 		planet1.update(planet2.mass, planet2.xpos, planet2.ypos);
 		trail1.push([planet1.xpos, planet1.ypos]);
@@ -66,8 +68,6 @@ function draw(){
 		}
 		endShape();
 		fill(255);
-		planet1.display();
-		planet2.display();
 	}
 }
 
